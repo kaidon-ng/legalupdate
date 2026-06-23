@@ -1,0 +1,17 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.git/
+storage/
+data/
+data_processed/
+summary_pdfs/
+cases_summary.json
+digest_data.js
+scraper_status.json
+token_log.json
+legal_digest.db
+firebase-service-account*.json
+service-account*.json
+*serviceAccount*.json

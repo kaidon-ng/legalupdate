@@ -1,0 +1,11 @@
+apify
+apify-client
+boto3
+firebase-admin
+flask
+httpx
+openai
+playwright
+pymupdf
+python-dotenv
+reportlab

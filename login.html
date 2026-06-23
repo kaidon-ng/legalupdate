@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - Law Digest</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="side-panel" aria-label="Account summary">
+        <div>
+          <p class="eyebrow">Singapore Law Digest</p>
+          <h1>Sign in</h1>
+          <p class="lede">
+            Save your sources, topics, and reader type for a personalised digest.
+          </p>
+        </div>
+
+        <section class="preview-panel" aria-live="polite">
+          <p class="panel-label">Demo account</p>
+          <div class="summary-row">
+            <span>Email</span>
+            <strong>demo@example.com</strong>
+          </div>
+          <div class="summary-row">
+            <span>Password</span>
+            <strong>password123</strong>
+          </div>
+        </section>
+      </aside>
+
+      <section class="config-panel login-panel" aria-labelledby="loginTitle">
+        <div class="top-actions">
+          <a class="secondary-button nav-button" href="./index.html">Preferences</a>
+          <a class="primary-button nav-button" href="./digest">View digest</a>
+        </div>
+
+        <div class="section-heading">
+          <p class="eyebrow">Account</p>
+          <h2 id="loginTitle">Login or create account</h2>
+        </div>
+
+        <section class="auth-panel login-card" aria-labelledby="accountTitle">
+          <div class="section-copy">
+            <h3 id="accountTitle">Your account</h3>
+            <p id="authStatus">Sign in to save preferences to the database.</p>
+          </div>
+
+          <form class="auth-form" id="authForm">
+            <label>
+              <span>Email</span>
+              <input type="email" id="authEmail" autocomplete="email" required />
+            </label>
+            <label>
+              <span>Password</span>
+              <input type="password" id="authPassword" autocomplete="current-password" required />
+            </label>
+            <div class="auth-actions">
+              <button type="submit" class="primary-button" id="loginButton">Log in</button>
+              <button type="button" class="secondary-button" id="registerButton">Create account</button>
+              <button type="button" class="secondary-button" id="logoutButton" hidden>Log out</button>
+            </div>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script src="./login.js"></script>
+  </body>
+</html>

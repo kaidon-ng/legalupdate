@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Law Digest Preferences</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="side-panel" aria-label="Digest summary">
+        <div>
+          <p class="eyebrow">Singapore Law Digest</p>
+          <h1>Configure your weekly brief</h1>
+          <p class="lede">
+            Choose the legal sources and reading style for your newsletter.
+          </p>
+        </div>
+
+        <section class="preview-panel" aria-live="polite">
+          <p class="panel-label">Current setup</p>
+          <div class="profile-pill" id="profilePreview">Regular reader</div>
+          <div class="summary-row">
+            <span>Enabled sources</span>
+            <strong id="sourceCount">0</strong>
+          </div>
+          <div class="summary-row">
+            <span>Digest style</span>
+            <strong id="stylePreview">Plain English</strong>
+          </div>
+        </section>
+      </aside>
+
+      <section class="config-panel" aria-labelledby="configTitle">
+        <div class="top-actions">
+          <a class="secondary-button nav-button" href="./login.html">Login</a>
+          <a class="primary-button nav-button" href="./digest">View digest</a>
+        </div>
+
+        <div class="section-heading">
+          <p class="eyebrow">Preferences</p>
+          <h2 id="configTitle">Your update settings</h2>
+        </div>
+
+        <form id="preferencesForm">
+          <section class="form-section" aria-labelledby="audienceTitle">
+            <div class="section-copy">
+              <h3 id="audienceTitle">Reader type</h3>
+              <p>Controls how the newsletter explains judgments and practical impact.</p>
+            </div>
+
+            <div class="segmented-control" role="radiogroup" aria-label="Reader type">
+              <label class="segment">
+                <input type="radio" name="readerType" value="regular" checked />
+                <span>Regular Joe</span>
+              </label>
+              <label class="segment">
+                <input type="radio" name="readerType" value="lawyer" />
+                <span>Lawyer</span>
+              </label>
+            </div>
+          </section>
+
+          <section class="form-section" aria-labelledby="sourcesTitle">
+            <div class="section-copy">
+              <h3 id="sourcesTitle">Sources</h3>
+              <p>Select which judgment feeds should appear in the weekly digest.</p>
+            </div>
+
+            <div class="source-list">
+              <article class="source-item">
+                <div>
+                  <h4>eLitigation Singapore</h4>
+                  <p>Singapore court judgments and neutral citations.</p>
+                </div>
+                <label class="toggle">
+                  <input type="checkbox" name="source" value="elitigation" checked />
+                  <span class="toggle-track" aria-hidden="true"></span>
+                  <span class="sr-only">Enable eLitigation Singapore</span>
+                </label>
+              </article>
+
+              <article class="source-item">
+                <div>
+                  <h4>BAILII UK Supreme Court</h4>
+                  <p>UKSC decisions for common law developments.</p>
+                </div>
+                <label class="toggle">
+                  <input type="checkbox" name="source" value="bailii-uksc" checked />
+                  <span class="toggle-track" aria-hidden="true"></span>
+                  <span class="sr-only">Enable BAILII UK Supreme Court</span>
+                </label>
+              </article>
+
+              <article class="source-item">
+                <div>
+                  <h4>BAILII EWHC Commercial</h4>
+                  <p>Commercial Court judgments with business law relevance.</p>
+                </div>
+                <label class="toggle">
+                  <input type="checkbox" name="source" value="bailii-ewhc-commercial" />
+                  <span class="toggle-track" aria-hidden="true"></span>
+                  <span class="sr-only">Enable BAILII EWHC Commercial</span>
+                </label>
+              </article>
+
+              <article class="source-item">
+                <div>
+                  <h4>BAILII EWHC Admiralty</h4>
+                  <p>Shipping, maritime, and admiralty decisions.</p>
+                </div>
+                <label class="toggle">
+                  <input type="checkbox" name="source" value="bailii-ewhc-admiralty" />
+                  <span class="toggle-track" aria-hidden="true"></span>
+                  <span class="sr-only">Enable BAILII EWHC Admiralty</span>
+                </label>
+              </article>
+
+              <article class="source-item">
+                <div>
+                  <h4>AustLII</h4>
+                  <p>Australian common law updates, toggle only for now.</p>
+                </div>
+                <label class="toggle">
+                  <input type="checkbox" name="source" value="austlii" />
+                  <span class="toggle-track" aria-hidden="true"></span>
+                  <span class="sr-only">Enable AustLII</span>
+                </label>
+              </article>
+            </div>
+          </section>
+
+          <section class="form-section" aria-labelledby="topicsTitle">
+            <div class="section-copy">
+              <h3 id="topicsTitle">Topics</h3>
+              <p>These can later map to automated case classification.</p>
+            </div>
+
+            <div class="chip-grid" aria-label="Legal topics">
+              <label class="chip">
+                <input type="checkbox" name="topic" value="criminal" checked />
+                <span>Criminal</span>
+              </label>
+              <label class="chip">
+                <input type="checkbox" name="topic" value="family" />
+                <span>Family</span>
+              </label>
+              <label class="chip">
+                <input type="checkbox" name="topic" value="employment" checked />
+                <span>Employment</span>
+              </label>
+              <label class="chip">
+                <input type="checkbox" name="topic" value="contract" checked />
+                <span>Contract</span>
+              </label>
+              <label class="chip">
+                <input type="checkbox" name="topic" value="data-protection" />
+                <span>Data Protection</span>
+              </label>
+              <label class="chip">
+                <input type="checkbox" name="topic" value="shipping" />
+                <span>Shipping</span>
+              </label>
+            </div>
+          </section>
+
+          <div class="action-row">
+            <button type="button" class="secondary-button" id="resetButton">Reset</button>
+            <button type="submit" class="primary-button">Save preferences</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

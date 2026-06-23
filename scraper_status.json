@@ -1,0 +1,22 @@
+{
+  "singapore": {
+    "status": "ok",
+    "message": "Finished",
+    "cases": 13
+  },
+  "bailii_comm": {
+    "status": "ok",
+    "message": "Finished",
+    "cases": 8
+  },
+  "bailii_uksc": {
+    "status": "ok",
+    "message": "Finished",
+    "cases": 1
+  },
+  "bailii_admlty": {
+    "status": "ok",
+    "message": "Finished",
+    "cases": 0
+  }
+}

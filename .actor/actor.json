@@ -1,0 +1,15 @@
+{
+  "actorSpecification": 1,
+  "name": "legal-digest-scraper",
+  "title": "Legal Digest Scraper",
+  "version": "0.1",
+  "buildTag": "latest",
+  "defaultMemoryMbytes": 2048,
+  "minMemoryMbytes": 1024,
+  "maxMemoryMbytes": 4096,
+  "environmentVariables": {
+    "CI": "true",
+    "OPENAI_MODEL": "gpt-5.4"
+  },
+  "input": "./INPUT_SCHEMA.json"
+}

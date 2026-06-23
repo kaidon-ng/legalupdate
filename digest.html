@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Legal Updates Digest</title>
+    <link rel="stylesheet" href="./digest.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar">
+        <div class="brand-block">
+          <button class="icon-button menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div>
+            <p class="eyebrow">Common Law Digest</p>
+            <h1>Legal Updates</h1>
+          </div>
+        </div>
+
+        <div class="top-meta" aria-live="polite">
+          <a class="small-button" href="./index.html">Preferences</a>
+          <span id="topDate">-</span>
+          <strong id="topCaseCount">0 cases</strong>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <aside class="sidebar" id="sidebar" aria-label="Digest navigation">
+          <nav class="sidebar-inner">
+            <a class="overview-link" id="overviewLink" href="#overview">Overview</a>
+
+            <section class="sidebar-section" aria-labelledby="sourcesTitle">
+              <h2 id="sourcesTitle">Sources</h2>
+              <div class="source-nav" id="sourceNav"></div>
+            </section>
+
+            <section class="sidebar-section warning-section" id="warningSection" hidden>
+              <h2>Warnings</h2>
+              <div id="warningList"></div>
+            </section>
+          </nav>
+        </aside>
+
+        <main class="main-content" id="mainContent" tabindex="-1"></main>
+      </div>
+    </div>
+
+    <div class="pdf-modal" id="pdfPanel" role="dialog" aria-modal="true" aria-labelledby="pdfTitle" hidden>
+      <button class="pdf-modal-backdrop" id="pdfBackdrop" type="button" aria-label="Close PDF preview"></button>
+      <section class="pdf-modal-card">
+        <div class="pdf-titlebar">
+          <strong id="pdfTitle">Summary PDF</strong>
+          <button class="small-button" id="closePdfButton" type="button">Close</button>
+        </div>
+        <iframe id="pdfFrame" title="Summary PDF preview"></iframe>
+      </section>
+    </div>
+
+    <button class="sidebar-backdrop" id="sidebarBackdrop" type="button" aria-label="Close navigation" hidden></button>
+
+    <script src="./digest_data.js"></script>
+    <script src="./digest.js"></script>
+  </body>
+</html>

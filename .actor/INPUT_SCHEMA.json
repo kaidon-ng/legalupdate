@@ -1,0 +1,28 @@
+{
+  "title": "Legal Digest Scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "demoDate": {
+      "title": "Demo date",
+      "type": "string",
+      "description": "Optional YYYY-MM-DD override for testing a specific weekly window."
+    },
+    "summaryDetail": {
+      "title": "Summary detail",
+      "type": "string",
+      "description": "Choose the OpenAI prompt depth for generated case summaries.",
+      "enum": [
+        "long",
+        "short"
+      ],
+      "default": "long"
+    },
+    "openaiModel": {
+      "title": "OpenAI model",
+      "type": "string",
+      "description": "Model used for classification and summarisation.",
+      "default": "gpt-5.4"
+    }
+  }
+}
