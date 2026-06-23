@@ -55,6 +55,7 @@ async function submitAuth(action) {
       body: JSON.stringify({ email, password }),
     });
     setAuthState(payload.user);
+    window.location.href = "./index.html";
   } catch (error) {
     authStatus.textContent = error.message;
   }
